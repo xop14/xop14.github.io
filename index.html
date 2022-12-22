@@ -6,65 +6,193 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-    <title>David Green | Full-stack web developer in Japan</title>
+    <title>David Green | Front-end web developer in Japan</title>
 </head>
 <body>
     <nav class="section">
-        <div class="logo">logo</div>
+        <div class="logo">xop14.github.io</div>
         <div class="nav-items">
             <ul>
-                <li>Portfolio</li>
-                <li>Contact</li>
-                <li>GitHub</li>
+                <li class="nav-projects"><a>Projects</a></li>
+                <li class="nav-contact"><a>Contact</a></li>
+                <li><a href="https://github.com/xop14" target="_blank">GitHub</a></li>
             </ul>
         </div>
         <div class="lang-switcher">
-            日本語
+            <button>日本語</button>
+        </div>
+        <div class="hamburger">
+            <svg style="width:30px;height:30px" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
+            </svg>
         </div>
     </nav>
+    <div class="mobile-nav">
+        <div class="hamburger-close">
+            <svg style="width:30px;height:30px" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />
+            </svg>
+        </div>
+        <div class="mobile-nav-items">
+            <ul>
+                <li class="mobile-nav-projects"><a>Projects</a></li>
+                <li class="mobile-nav-contact"><a>Contact</a></li>
+                <li><a href="https://github.com/xop14" target="_blank">GitHub</a></li>
+            </ul>
+        </div>
+        <div class="mobile-lang-switcher">
+            <button>日本語</button>
+        </div>
+    </div>
     <header class="section ">
         <div class="header-image">
             <img src="./images/portrait.jpeg" alt="">
         </div>
         <div class="header-text">
-            <h1 class="title en highlight">davidGreen.<span class="hide-me"> </span>portfolio;</h1>
+            <!-- <h1 class="title en highlight">davidGreen.<span class="hide-me"> </span>portfolio;</h1> -->
+            <h1 class="title en highlight">Hi. I'm David Green.<br>This is my portfilio.</h1>
             <h2 class="en">
-                Creative full-stack web developer in Japan.
-                I love technology, problem solving and creating magical user experiences.
+                Front-end web developer in Japan.
+                Learning full stack.
+                I love technology, problem solving, design, and creating magical user experiences.
             </h2>
         </div>
     </header>
-    <main class="section projects">
-        <h2>myProjects;</h2>
+    <main class="section projects" id="projects">
+        <h2>Projects</h2>
+        <p>Here is a selection of web-based projects that I have completed as part of Harvard X's amazing <a href="https://cs50.harvard.edu/x/2022/" target="_blank">CS50</a> and <a href="https://cs50.harvard.edu/web/2020/" target="_blank">CS50W</a> courses, as well as the fantastic <a href="https://www.theodinproject.com" target="_blank">Odin Project</a>. 
+            I always try to go beyond the project specifications and put extra effort into design and functionality to create projects that impress.</p>
         <div class="categories">
-            <button>HTML</button>
-            <button>CSS</button>
-            <button>JavaScript</button>
-            <button>Python</button>
-            <button>Django</button>
-            <button>Front-end</button>
-            <button>Full-stack</button>
+            <button>
+                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M12,17.56L16.07,16.43L16.62,10.33H9.38L9.2,8.3H16.8L17,6.31H7L7.56,12.32H14.45L14.22,14.9L12,15.5L9.78,14.9L9.64,13.24H7.64L7.93,16.43L12,17.56M4.07,3H19.93L18.5,19.2L12,21L5.5,19.2L4.07,3Z" />
+                </svg>
+                HTML
+            </button>
+            <button>
+                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M5,3L4.35,6.34H17.94L17.5,8.5H3.92L3.26,11.83H16.85L16.09,15.64L10.61,17.45L5.86,15.64L6.19,14H2.85L2.06,18L9.91,21L18.96,18L20.16,11.97L20.4,10.76L21.94,3H5Z" />
+                </svg>
+                CSS
+            </button>
+            <button>
+                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M3,3H21V21H3V3M7.73,18.04C8.13,18.89 8.92,19.59 10.27,19.59C11.77,19.59 12.8,18.79 12.8,17.04V11.26H11.1V17C11.1,17.86 10.75,18.08 10.2,18.08C9.62,18.08 9.38,17.68 9.11,17.21L7.73,18.04M13.71,17.86C14.21,18.84 15.22,19.59 16.8,19.59C18.4,19.59 19.6,18.76 19.6,17.23C19.6,15.82 18.79,15.19 17.35,14.57L16.93,14.39C16.2,14.08 15.89,13.87 15.89,13.37C15.89,12.96 16.2,12.64 16.7,12.64C17.18,12.64 17.5,12.85 17.79,13.37L19.1,12.5C18.55,11.54 17.77,11.17 16.7,11.17C15.19,11.17 14.22,12.13 14.22,13.4C14.22,14.78 15.03,15.43 16.25,15.95L16.67,16.13C17.45,16.47 17.91,16.68 17.91,17.26C17.91,17.74 17.46,18.09 16.76,18.09C15.93,18.09 15.45,17.66 15.09,17.06L13.71,17.86Z" />
+                </svg>
+                JavaScript
+            </button>
+            <button>
+                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M19.14,7.5A2.86,2.86 0 0,1 22,10.36V14.14A2.86,2.86 0 0,1 19.14,17H12C12,17.39 12.32,17.96 12.71,17.96H17V19.64A2.86,2.86 0 0,1 14.14,22.5H9.86A2.86,2.86 0 0,1 7,19.64V15.89C7,14.31 8.28,13.04 9.86,13.04H15.11C16.69,13.04 17.96,11.76 17.96,10.18V7.5H19.14M14.86,19.29C14.46,19.29 14.14,19.59 14.14,20.18C14.14,20.77 14.46,20.89 14.86,20.89A0.71,0.71 0 0,0 15.57,20.18C15.57,19.59 15.25,19.29 14.86,19.29M4.86,17.5C3.28,17.5 2,16.22 2,14.64V10.86C2,9.28 3.28,8 4.86,8H12C12,7.61 11.68,7.04 11.29,7.04H7V5.36C7,3.78 8.28,2.5 9.86,2.5H14.14C15.72,2.5 17,3.78 17,5.36V9.11C17,10.69 15.72,11.96 14.14,11.96H8.89C7.31,11.96 6.04,13.24 6.04,14.82V17.5H4.86M9.14,5.71C9.54,5.71 9.86,5.41 9.86,4.82C9.86,4.23 9.54,4.11 9.14,4.11C8.75,4.11 8.43,4.23 8.43,4.82C8.43,5.41 8.75,5.71 9.14,5.71Z" />
+                </svg>
+                Python
+            </button>
+            <button>
+                <svg width="24px" height="24px" viewBox="0 0 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
+                    <g>
+                        <rect fill="currentColor" x="0" y="0" width="256" height="256" rx="28"></rect>
+                        <path d="M186.377012,94.197636 L186.377012,160.424478 C186.377012,183.243286 184.707519,194.187745 179.699037,203.649406 C175.060358,212.741266 168.937684,218.490548 156.323731,224.798721 L129.794937,212.183571 C142.410087,206.247593 148.531564,201.05481 152.427049,193.074749 C156.509231,184.91278 157.808923,175.451119 157.808923,150.593015 L157.808923,94.197636 L186.377012,94.197636 Z M140.928486,50.0787207 L140.928486,182.316986 C126.272844,185.099476 115.512688,186.212472 103.826231,186.212472 C68.9487718,186.212472 50.7686431,170.445031 50.7686431,140.205054 C50.7686431,111.079269 70.0629644,92.1583404 99.9295492,92.1583404 C104.567032,92.1583404 108.091519,92.5281423 112.359199,93.6411381 L112.359199,50.0787207 L140.928486,50.0787207 Z M102.713236,115.160254 C88.243093,115.160254 79.8944275,124.065418 79.8944275,139.647359 C79.8944275,154.860696 87.8720944,163.208164 102.527736,163.208164 C105.680028,163.208164 108.278215,163.022665 112.359199,162.467364 L112.359199,116.643052 C109.020212,115.531253 106.237722,115.160254 102.713236,115.160254 Z M186.377012,50.2307105 L186.377012,79.5419941 L157.808923,79.5419941 L157.808923,50.2307105 L186.377012,50.2307105 Z" fill="#FFFFFD"></path>
+                    </g>
+                </svg>
+                Django
+            </button>
+            <button>
+                <svg width="24px" height="24px" viewBox="0 0 500 500" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" fill="currentColor">
+                    <g>
+                        <path d="M472.178,34.62H39.822C17.864,34.62,0,52.485,0,74.442c0,17.955,0,345.234,0,363.115
+                            c0,21.958,17.864,39.822,39.822,39.822h432.356c21.958,0,39.822-17.864,39.822-39.822c0-17.89,0-345.165,0-363.115
+                            C512,52.485,494.136,34.62,472.178,34.62z M477.867,437.557c0,3.137-2.552,5.689-5.689,5.689H39.822
+                            c-3.137,0-5.689-2.552-5.689-5.689V153.839h443.733V437.557z M477.867,119.706H34.133V74.442c0-3.137,2.552-5.689,5.689-5.689
+                            h432.356c3.137,0,5.689,2.552,5.689,5.689V119.706z"/>
+                        <circle cx="71.805" cy="94.231" r="12.836"/>
+                        <circle cx="112.959" cy="94.231" r="12.836"/>
+                        <circle cx="154.112" cy="94.231" r="12.836"/>
+                        <path d="M141.888,375.42c15.923,15.924,40.067-8.205,24.136-24.136l-53.379-53.38l53.379-53.379
+                            c15.947-15.947-8.173-40.1-24.136-24.136l-65.446,65.446c-6.665,6.665-6.665,17.471,0,24.136L141.888,375.42z"/>
+                        <path d="M370.111,375.42l65.447-65.447c6.661-6.659,6.665-17.472,0-24.136l-65.447-65.447
+                            c-15.944-15.945-40.104,8.169-24.136,24.136l53.38,53.379l-53.38,53.379C329.729,367.53,354.487,391.043,370.111,375.42z"/>
+                        <path d="M225.787,391.681l97.693-169.208c11.297-19.565-18.291-36.589-29.561-17.067l-97.693,169.208
+                            C184.856,394.309,214.616,411.032,225.787,391.681z"/>
+                    </g>
+                </svg>
+                Front-end
+            </button>
+            <button>
+                <svg width="24px" height="24px" viewBox="0 0 500 500" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" fill="currentColor">
+                    <g transform="matrix(1.33649,0,0,1.33649,-84.2944,-9.1146)">
+                        <path d="M88.009,129.947L84.834,131.262C73.675,135.882 66.239,146.589 65.806,158.658C65.372,170.727 72.022,181.94 82.82,187.348C126.273,209.113 183.288,237.67 218.974,255.543C240.211,266.18 265.237,266.099 286.404,255.324C321.098,237.664 375.861,209.788 417.616,188.534C428.257,183.117 434.817,172.045 434.457,160.11C434.096,148.174 426.88,137.519 415.931,132.754L412.37,131.204L378.909,148.236L393.143,154.431C396.022,155.683 397.918,158.484 398.013,161.622C398.108,164.759 396.384,167.67 393.586,169.094C366.336,182.965 309.239,212.029 276.385,228.753C260.855,236.658 242.493,236.718 226.912,228.913C193.148,212.002 133.651,182.202 105.308,168.006C102.47,166.584 100.722,163.637 100.836,160.464C100.949,157.292 102.904,154.477 105.837,153.263L121.561,146.752L88.009,129.947Z"/>
+                    </g>
+                    <g transform="matrix(1.33649,0,0,1.33649,-84.2944,68.1225)">
+                        <path d="M88.009,129.947L84.834,131.262C73.675,135.882 66.239,146.589 65.806,158.658C65.372,170.727 72.022,181.94 82.82,187.348C126.273,209.113 183.288,237.67 218.974,255.543C240.211,266.18 265.237,266.099 286.404,255.324C321.098,237.664 375.861,209.788 417.616,188.534C428.257,183.117 434.817,172.045 434.457,160.11C434.096,148.174 426.88,137.519 415.931,132.754L412.37,131.204L378.909,148.236L393.143,154.431C396.022,155.683 397.918,158.484 398.013,161.622C398.108,164.759 396.384,167.67 393.586,169.094C366.336,182.965 309.239,212.029 276.385,228.753C260.855,236.658 242.493,236.718 226.912,228.913C193.148,212.002 133.651,182.202 105.308,168.006C102.47,166.584 100.722,163.637 100.836,160.464C100.949,157.292 102.904,154.477 105.837,153.263L121.561,146.752L88.009,129.947Z"/>
+                    </g>
+                    <g transform="matrix(1.33649,0,0,1.33649,-84.2944,144.008)">
+                        <path d="M88.009,129.947L84.834,131.262C73.675,135.882 66.239,146.589 65.806,158.658C65.372,170.727 72.022,181.94 82.82,187.348C126.273,209.113 183.288,237.67 218.974,255.543C240.211,266.18 265.237,266.099 286.404,255.324C321.098,237.664 375.861,209.788 417.616,188.534C428.257,183.117 434.817,172.045 434.457,160.11C434.096,148.174 426.88,137.519 415.931,132.754L412.37,131.204L378.909,148.236L393.143,154.431C396.022,155.683 397.918,158.484 398.013,161.622C398.108,164.759 396.384,167.67 393.586,169.094C366.336,182.965 309.239,212.029 276.385,228.753C260.855,236.658 242.493,236.718 226.912,228.913C193.148,212.002 133.651,182.202 105.308,168.006C102.47,166.584 100.722,163.637 100.836,160.464C100.949,157.292 102.904,154.477 105.837,153.263L121.561,146.752L88.009,129.947Z"/>
+                    </g>
+                    <g transform="matrix(1.33649,0,0,1.33649,-84.2944,-85.8628)">
+                        <path d="M281.865,74.411C263.255,66.312 242.153,66.123 223.401,73.887C188.674,88.266 129.884,112.609 84.834,131.262C73.675,135.882 66.239,146.589 65.806,158.658C65.372,170.727 72.022,181.94 82.82,187.348C126.273,209.113 183.288,237.67 218.974,255.543C240.211,266.18 265.237,266.099 286.404,255.324C321.098,237.664 375.861,209.788 417.616,188.534C428.257,183.117 434.817,172.045 434.457,160.11C434.096,148.174 426.88,137.519 415.931,132.754C372.512,113.859 315.725,89.146 281.865,74.411ZM273.054,102.17C259.401,96.228 243.918,96.09 230.16,101.786C197.297,115.394 135.331,141.051 105.837,153.263C102.904,154.477 100.949,157.292 100.836,160.464C100.722,163.637 102.47,166.584 105.308,168.006C133.651,182.202 193.148,212.002 226.912,228.913C242.493,236.718 260.855,236.658 276.385,228.753C309.239,212.029 366.336,182.965 393.586,169.094C396.384,167.67 398.108,164.759 398.013,161.622C397.918,158.484 396.022,155.683 393.143,154.431C364.765,142.081 305.073,116.104 273.054,102.17Z"/>
+                    </g>
+                </svg>
+                Full-stack
+            </button>
         </div>
+
+
         <div class="cards">
+
+            
             <div class="card">
                 <div class="card-content">
                     <h3>Pixel Machine</h3>
-                    <p>Create and export retro pixel art right in your desktop browser. Add and remove colors from your palette, change your brush size, undo and redo your changes, and much more.</p>
+                    <p>Create and export retro pixel art right from your desktop browser. Edit your palette, adjust your brush size, undo and redo your changes, and much more.</p>
                     <div class="card-tags">
                         <div class="tag-html">HTML</div>
                         <div class="tag-css">CSS</div>
                         <div class="tag-js">JavaScript</div>
                     </div>
                     <div class="card-btns">
-                        <button>More info</button>
-                        <button>Live URL</button>
+                        <button onclick="location.href='https://github.com/xop14/pixel-machine'">View on GitHub</button>
+                        <button onclick="location.href='https://xop14.github.io/pixel-machine'">Live Preview</button>
                     </div>
                 </div>
                 <div class="card-image">
-                    <img src="./images/pixel-machine.png" alt="">
+                    <div class="card-overlay">
+                        <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17M12,4.5C7,4.5 2.73,7.61 1,12C2.73,16.39 7,19.5 12,19.5C17,19.5 21.27,16.39 23,12C21.27,7.61 17,4.5 12,4.5Z" />
+                        </svg>
+                        <h3>Live Preview</h3>
+                    </div>
+                    <img class="card-image" src="./images/pixel-machine.png" alt="">
                 </div>
             </div>
 
+            <div class="card">
+                <div class="card-content">
+                    <h3>Auciton Site</h3>
+                    <p>Full-stack responsive auction site written in Python/Django with user accounts, bidding, comment section, categories and watchlists. This project was part of Harvard X's CS50W course.</p>
+                    <div class="card-tags">
+                        <div class="tag-html">HTML</div>
+                        <div class="tag-css">CSS</div>
+                        <div class="tag-js">JavaScript</div>
+                        <div class="tag-python">Python</div>
+                        <div class="tag-django">Django</div>
+
+                    </div>
+                    <div class="card-btns">
+                        <button onclick="location.href='https://github.com/xop14/auction'">View on GitHub</button>
+                        <button onclick="location.href='https://xop14.github.io/dashboard'">Watch Video</button>
+                    </div>
+                </div>
+                <div class="card-image">
+                    <div class="card-overlay" onclick="location.href='https://xop14.github.io/dashboard'">
+                        <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17M12,4.5C7,4.5 2.73,7.61 1,12C2.73,16.39 7,19.5 12,19.5C17,19.5 21.27,16.39 23,12C21.27,7.61 17,4.5 12,4.5Z" />
+                        </svg>
+                        <h3>Watch Video</h3>
+                    </div>
+                    <img class="card-image" src="./images/auction.png" alt="">
+                </div>
+            </div>
+            
             <div class="card">
                 <div class="card-content">
                     <h3>Metronome</h3>
@@ -75,22 +203,91 @@
                         <div class="tag-js">JavaScript</div>
                     </div>
                     <div class="card-btns">
-                        <button>More info</button>
-                        <button>Live URL</button>
+                        <button onclick="location.href='https://github.com/xop14/metronome'">View on GitHub</button>
+                        <button onclick="location.href='https://xop14.github.io/metronome'">Live Preview</button>
                     </div>
                 </div>
                 <div class="card-image">
-                    <img src="./images/metronome.png" alt="">
+                    <div class="card-overlay">
+                        <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17M12,4.5C7,4.5 2.73,7.61 1,12C2.73,16.39 7,19.5 12,19.5C17,19.5 21.27,16.39 23,12C21.27,7.61 17,4.5 12,4.5Z" />
+                        </svg>
+                        <h3>Live Preview</h3>
+                    </div>
+                    <img class="card-image" src="./images/metronome.png" alt="">
                 </div>
             </div>
-        </div>
+            
+            <div class="card">
+                <div class="card-content">
+                    <h3>Sign-up Form</h3>
+                    <p>Responsive sign-up form with delayed JavaScript validation that follows the best-practice of waiting to warn the user of errors until they have moved to the next input field.</p>
+                    <div class="card-tags">
+                        <div class="tag-html">HTML</div>
+                        <div class="tag-css">CSS</div>
+                        <div class="tag-js">JavaScript</div>
+                    </div>
+                    <div class="card-btns">
+                        <button onclick="location.href='https://github.com/xop14/sign-up-form'">View on GitHub</button>
+                        <button onclick="location.href='https://xop14.github.io/sign-up-form'">Live Preview</button>
+                    </div>
+                </div>
+                <div class="card-image">
+                    <div class="card-overlay">
+                        <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17M12,4.5C7,4.5 2.73,7.61 1,12C2.73,16.39 7,19.5 12,19.5C17,19.5 21.27,16.39 23,12C21.27,7.61 17,4.5 12,4.5Z" />
+                        </svg>
+                        <h3>Live Preview</h3>
+                    </div>
+                    <img class="card-image" src="./images/sign-up.png" alt="">
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <h3>Admin Dashboard</h3>
+                    <p>Fully responsive admin dashboard layout with darkmode and using CSS grid to adjust the number of cards per row as the window size changes. Made as part of The Odin Project.</p>
+                    <div class="card-tags">
+                        <div class="tag-html">HTML</div>
+                        <div class="tag-css">CSS</div>
+                        <div class="tag-js">JavaScript</div>
+                    </div>
+                    <div class="card-btns">
+                        <button onclick="location.href='https://github.com/xop14/dashboard'">View on GitHub</button>
+                        <button onclick="location.href='https://xop14.github.io/dashboard'">Live Preview</button>
+                    </div>
+                </div>
+                <div class="card-image">
+                    <div class="card-overlay" onclick="location.href='https://xop14.github.io/dashboard'">
+                        <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17M12,4.5C7,4.5 2.73,7.61 1,12C2.73,16.39 7,19.5 12,19.5C17,19.5 21.27,16.39 23,12C21.27,7.61 17,4.5 12,4.5Z" />
+                        </svg>
+                        <h3>Live Preview</h3>
+                    </div>
+                    <img class="card-image" src="./images/dashboard.jpg" alt="">
+                </div>
+            </div>
     </main>
-    <section class="section contact">
+    <section class="section contact" id="contact">
         <h2>Contact me</h2>
+        <p>Feel free to get in touch if you have any questions about my projects.</p>
+
+        <form action="https://formbold.com/s/3nnd3" method="POST">
+            <label for="email">
+            Your email:
+            </label>
+            <input id="email" type="email" name="email">
+            <label for="message">
+            Your message:
+            </label>
+            <textarea id="message" name="message"></textarea>
+            <button type="submit">Send</button>
+        </form>
 
     </section>
     <footer class="section">
-        All content on this site was created by David Green (<a href="https://github.com/xop14" target="_blank">xop14 on GitHub</a>)
+        This site was created by David Green <a href="https://github.com/xop14" target="_blank">xop14 on GitHub</a>
     </footer>
+    <script src="./portfolio.js"></script>
 </body>
 </html>
