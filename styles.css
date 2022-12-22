@@ -150,7 +150,7 @@ nav button:hover {
 .mobile-nav {
     background-color: #09315b;
     position: absolute;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     display: none;
     padding: 30px 20px;
@@ -336,7 +336,7 @@ header {
 .cards {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 60px;
 }
 
 .card {
@@ -438,6 +438,7 @@ header {
     .card-image {
         grid-row: 1 / 2;
         align-items:flex-start;
+        border-radius: 5px 5px 0 0;
     }
 
     .card-image img {

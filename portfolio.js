@@ -43,14 +43,13 @@ mobileNavContact.addEventListener("click", () => {
 function showMobileNav() {
     if (!isMenuOpen) {
         mobileNav.style.display = 'flex';
-        mobileNav.style.animation = 'slide 0.3s ease-in-out';
-        mobileNav.height = '100vh';
+        mobileNav.style.animation = 'slide 500ms ease-in-out';
         isMenuOpen = true;
     } else {
-        mobileNav.style.animation = 'slide-back 0.3s ease-in-out';
+        mobileNav.style.animation = 'slide-back 500ms ease-in-out';
         setTimeout(() => {
             mobileNav.style.display = 'none';
-        }, 300);
+        }, 500);
         isMenuOpen = false;
     }
 }
