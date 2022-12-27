@@ -63,8 +63,9 @@ nav {
     display: flex;
     gap: 20px;
     background-color: transparent;
-    color: #597698;
     align-items: center;
+    position: absolute;
+    width: 100%;
 }
 
 .logo {
@@ -87,14 +88,14 @@ nav li {
     margin-left: auto;
 }
 .nav-items a, .logo a {
-    color: #4a6585;
+    color: #fff6;
     text-decoration: none;
 }
 .nav-items a:hover, .logo a:hover {
     text-decoration: underline;
     text-underline-offset: 5px;
     text-decoration-thickness: 3px;
-    color: #a7bed9;
+    color: #fffc;
 
 }
 
@@ -118,7 +119,7 @@ nav li {
 }
 
 .mobile-nav-items a {
-    color: #668cb9;
+    color: #c9a8e6;
     text-decoration: none;
     cursor: pointer;
 }
@@ -219,8 +220,13 @@ header {
     grid-template-columns: 1fr 300px;
     gap: 60px;
     justify-content: center;
-    padding: 80px max(calc(50vw - 500px), 20px) 100px !important;
+    padding: 140px max(calc(50vw - 500px), 20px) 100px !important;
     min-height: 70vh;
+    background: 
+        radial-gradient(ellipse at top left, #3a034e, transparent), 
+        radial-gradient(ellipse at top right,#175579, transparent),
+        radial-gradient(ellipse at bottom left,#015d62, transparent),
+        radial-gradient(ellipse at bottom right,#9a083e, transparent);
 }
 
 
@@ -236,7 +242,7 @@ header {
     border-radius: 50%;
     outline: 0vw solid #fff2;
     min-width: 200px;
-    box-shadow: 0 0 10px 10px #0b1b30;
+    box-shadow: 0 0 10px 10px #0b1b3022;
 }
 
 .header-text {
@@ -252,7 +258,7 @@ header {
 }
 
 .highlight {
-    background: linear-gradient(to right, #f2277f 0%, #f7c921 100%);
+    background: linear-gradient(to right, #fa509a 0%, #ffd747 100%);
     background-size: 200%;
     background-clip: text;
     -webkit-background-clip: text;
@@ -272,8 +278,9 @@ header {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(2, min-content);
         height: min-content;
-        padding-block: 60px !important;
+        padding-bottom: 60px !important;
         gap: 30px
+
     }
     .header-text {
         padding: 0 20px;
@@ -398,7 +405,11 @@ header {
     font-size: 0.9rem;
     transition: 0.3s ease-out;
     padding-bottom: 20px;
-    background: linear-gradient(to right, #f2277fcc 0%, #f7c921cc 100%);
+    background: 
+    radial-gradient(ellipse at top left, #41148f, transparent), 
+    radial-gradient(ellipse at top right,#c36b13, transparent),
+    radial-gradient(ellipse at bottom left,#015d62, transparent),
+    radial-gradient(ellipse at bottom right,#e31e94, transparent);
     opacity: 0;
 }
 .card-overlay:hover {
