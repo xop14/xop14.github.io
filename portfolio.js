@@ -1,12 +1,14 @@
 const cardOverlays = document.querySelectorAll('.card-overlay');
 const navItems = document.querySelector('.nav-items');
 const navProjects = document.querySelector('.nav-projects');
+const navDesign = document.querySelector('.nav-design');
 const navContact = document.querySelector('.nav-contact');
+const mobileNav = document.querySelector('.mobile-nav');
 const mobileNavProjects = document.querySelector('.mobile-nav-projects');
 const mobileNavContact = document.querySelector('.mobile-nav-contact');
 const hamburger = document.querySelector('.hamburger');
 const hamburgerClose = document.querySelector('.hamburger-close');
-const mobileNav = document.querySelector('.mobile-nav');
+const arrows = document.querySelectorAll('.arrow');
 
 
 let isMenuOpen = false;
@@ -23,19 +25,24 @@ navContact.addEventListener("click", () => {
         behavior: "smooth"
     })
 })
+navDesign.addEventListener("click", () => {
+    document.querySelector("#design").scrollIntoView({
+        behavior: "smooth"
+    })
+})
 
 // smooth scroll mobile nav links
 mobileNavProjects.addEventListener("click", () => {
     document.querySelector("#projects").scrollIntoView({
         behavior: "smooth"
-    })
-    showMobileNav()
+    });
+    showMobileNav();
 })
 mobileNavContact.addEventListener("click", () => {
     document.querySelector("#contact").scrollIntoView({
         behavior: "smooth"
-    })
-    showMobileNav()
+    });
+    showMobileNav();
 })
 
 
@@ -57,3 +64,17 @@ function showMobileNav() {
 hamburger.addEventListener('click', showMobileNav);
 hamburgerClose.addEventListener('click', showMobileNav);
 
+
+// horizontal scroll for design images
+
+arrows.forEach((arrow) => {
+    arrow.addEventListener('mousedown', (e) => {
+        console.log("arrow clicked");
+        let images = arrow.parentElement.firstElementChild;
+        imageWidth = images.firstElementChild.nextElementSibling.scrollWidth;
+        images.scrollBy({
+            left: imageWidth + 20,
+            behavior: "smooth"
+        });
+    });
+});

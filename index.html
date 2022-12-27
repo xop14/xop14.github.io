@@ -14,7 +14,7 @@
         <div class="nav-items">
             <ul>
                 <li class="nav-projects"><a>Web Projects</a></li>
-                <li class="nav-projects"><a>Design Work</a></li>
+                <li class="nav-design"><a>Design Work</a></li>
                 <li class="nav-contact"><a>Contact</a></li>
                 <li><a href="https://github.com/xop14" target="_blank">GitHub</a></li>
             </ul>
@@ -200,7 +200,7 @@
 
             <div class="card">
                 <div class="card-content">
-                    <h3>Auciton Site</h3>
+                    <h3>Auction Site</h3>
                     <p>Full-stack responsive auction site written in Python/Django with user accounts, bidding, comment section, categories and watchlists. This project was part of Harvard X's CS50W course.</p>
                     <div class="card-tags">
                         <div class="tag-html">HTML</div>
@@ -213,7 +213,7 @@
                     </div>
                     <div class="card-btns">
                         <button onclick="location.href='https://github.com/xop14/auction'">View on GitHub</button>
-                        <button onclick="location.href='https://youtu.be/iZ0GWz2vlus'">Watch Video</button>
+                        <button id="watch-auction" onclick="location.href='https://youtu.be/iZ0GWz2vlus'">Watch Video</button>
                     </div>
                 </div>
                 <div class="card-image">
@@ -302,6 +302,92 @@
                 </div>
             </div>
     </main>
+
+    <section id="design" class="section design-work">
+        <h2>Design Work</h2>
+        <p>I love to craft designs which are full of space and bold typography. For over 15 years I have work in English/Japanese bilingual environments and am comfortable creating designs in both languages.</p>
+        <h3>Design Tools</h3>
+        <div class="categories">
+            <button>
+                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M8.5,13.5L11,16.5L14.5,12L19,18H5M21,19V5C21,3.89 20.1,3 19,3H5A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19Z" />
+                </svg>
+                Photoshop
+            </button>
+            <button>
+                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M18.5,2A1.5,1.5 0 0,1 20,3.5A1.5,1.5 0 0,1 18.5,5C18.27,5 18.05,4.95 17.85,4.85L14.16,8.55L14.5,9C16.69,7.74 19.26,7 22,7L23,7.03V9.04L22,9C19.42,9 17,9.75 15,11.04A3.96,3.96 0 0,1 11.04,15C9.75,17 9,19.42 9,22L9.04,23H7.03L7,22C7,19.26 7.74,16.69 9,14.5L8.55,14.16L4.85,17.85C4.95,18.05 5,18.27 5,18.5A1.5,1.5 0 0,1 3.5,20A1.5,1.5 0 0,1 2,18.5A1.5,1.5 0 0,1 3.5,17C3.73,17 3.95,17.05 4.15,17.15L7.84,13.45C7.31,12.78 7,11.92 7,11A4,4 0 0,1 11,7C11.92,7 12.78,7.31 13.45,7.84L17.15,4.15C17.05,3.95 17,3.73 17,3.5A1.5,1.5 0 0,1 18.5,2M11,9A2,2 0 0,0 9,11A2,2 0 0,0 11,13A2,2 0 0,0 13,11A2,2 0 0,0 11,9Z" />
+                </svg>
+                Illustrator
+            </button>
+            <button>
+                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M20.84 2.18L16.91 2.96L19.65 6.5L21.62 6.1L20.84 2.18M13.97 3.54L12 3.93L14.75 7.46L16.71 7.07L13.97 3.54M9.07 4.5L7.1 4.91L9.85 8.44L11.81 8.05L9.07 4.5M4.16 5.5L3.18 5.69A2 2 0 0 0 1.61 8.04L2 10L6.9 9.03L4.16 5.5M2 10V20C2 21.11 2.9 22 4 22H20C21.11 22 22 21.11 22 20V10H2Z" />
+                </svg>
+                Premiere Pro
+            </button>
+            <button>
+                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M14,3.23V5.29C16.89,6.15 19,8.83 19,12C19,15.17 16.89,17.84 14,18.7V20.77C18,19.86 21,16.28 21,12C21,7.72 18,4.14 14,3.23M16.5,12C16.5,10.23 15.5,8.71 14,7.97V16C15.5,15.29 16.5,13.76 16.5,12M3,9V15H7L12,20V4L7,9H3Z" />
+                </svg>
+                Audition
+            </button>
+            <button>
+                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M20.84 2.18L16.91 2.96L19.65 6.5L21.62 6.1L20.84 2.18M13.97 3.54L12 3.93L14.75 7.46L16.71 7.07L13.97 3.54M9.07 4.5L7.1 4.91L9.85 8.44L11.81 8.05L9.07 4.5M4.16 5.5L3.18 5.69A2 2 0 0 0 1.61 8.04L2 10L6.9 9.03L4.16 5.5M2 10V20C2 21.11 2.9 22 4 22H20C21.11 22 22 21.11 22 20V10H2Z" />
+                </svg>
+                Resolve
+            </button>
+        </div>
+        <div class="design-card">
+            <h3>Connect English School</h3>
+            <p>Over 8 years I completed numerous graphic design projects for both web and print. The aim was to be bold, eye-catching and draw the customer in. Here is a small selection of images I designed for use on Connect's website.</p>
+            <div class="design-slider">
+                <div class="design-images images-connect">
+                    <img src="./images/connect/campaign.jpg" alt="">
+                    <img src="./images/connect/online-lessons.jpg" alt="">
+                    <img src="./images/connect/spring-campaign.jpg" alt="">
+                    <img src="./images/connect/connect-map.png" alt="">
+                    <img src="./images/connect/summer-campaign.jpg" alt="">
+                </div>
+                <div class="arrow arrow-connect">
+                    <div class="arrow-image">
+                        <svg style="width:48px;height:48px" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="design-card">
+            <h3>GraceCity Church</h3>
+            <p>For around 15 years I have created various images for screen and print including logos and event graphics. Below are a few examples of my work. I hope you can see my love of strong, punchy colors and bold typography come through.</p>
+            <div class="design-slider">
+                <!-- <div class="arrow arrow-left">
+                    <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z" />
+                    </svg>
+                </div> -->
+                <div class="design-images">
+                    <img src="./images/gracecity/gospel-choir.jpg" alt="">
+                    <img src="./images/gracecity/life-groups.jpg" alt="">
+                    <img src="./images/gracecity/gracecity-logo.png" alt="">
+                    <img src="./images/gracecity/japan-disaster.jpg" alt="">
+                    <img src="./images/gracecity/welcome-card.jpg" alt="">
+                    <img src="./images/gracecity/rainbow-corner.jpg" alt="">
+                </div>
+                <div class="arrow arrow-right">
+                    <div class="arrow-image">
+                        <svg style="width:48px;height:48px" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="section contact" id="contact">
         <h2>Contact me</h2>
         <p>Feel free to shoot me a quick message if you have any questions about my projects.</p>

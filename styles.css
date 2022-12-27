@@ -304,20 +304,21 @@ header {
 /* PROJECTS */
 
 .projects {
-    background-color: #d0d8e1;
+    /* background-color: #d0d8e1; */
+    background-color: #dedadd;
     padding-block: 80px;
 }
 .projects h2 {
     font-weight: 600;
     font-size: 2.4rem;
     text-align: left;
-    color: #1d6398;
+    color: #8c1361;
 }
 
 .projects > h3 {
     font-size: 1.3rem;
     margin-top: 40px;
-    color: #4e5963;
+    color: #6a4a65;
 
 }
 
@@ -341,7 +342,7 @@ header {
     min-width: 100px;
     border-radius: 5px;
     border: 1px solid #ccc;
-    cursor: pointer;
+    /* cursor: pointer; */
     display: grid;
     grid-template-columns: 24px 1fr;
     align-items: center;
@@ -350,10 +351,10 @@ header {
     white-space: nowrap;
     color: #222;
 }
-.categories button:hover {
+/* .categories button:hover {
     background-color: #efe2e8;
     transform: scale(1.03);
-}
+} */
 
 .categories button svg {
     height: 22px !important;
@@ -406,7 +407,7 @@ header {
     transition: 0.3s ease-out;
     padding-bottom: 20px;
     background: 
-    radial-gradient(ellipse at top left, #41148f, transparent), 
+    radial-gradient(ellipse at top left, #161e85, transparent), 
     radial-gradient(ellipse at top right,#c36b13, transparent),
     radial-gradient(ellipse at bottom left,#015d62, transparent),
     radial-gradient(ellipse at bottom right,#e31e94, transparent);
@@ -454,7 +455,7 @@ header {
 
 .card-content h3 {
     font-size: 1.4rem;
-    color: #1d6398;
+    color: #d82f83;
 }
 
 @media only screen and (max-width: 600px) {
@@ -577,10 +578,110 @@ header {
 
 }
 
+
+/* DESIGN WORK SECTION */
+
+.design-work {
+    /* background-color: #d0d8e1; */
+    background-color: #f5f3f5;
+    padding-block: 80px;
+}
+.design-work h2 {
+    font-weight: 600;
+    font-size: 2.4rem;
+    text-align: left;
+    color: #8c1361;
+}
+
+.design-work > h3 {
+    font-size: 1.3rem;
+    margin-top: 40px;
+    color: #6a4a65;
+
+}
+
+.design-work p {
+    color: #576571;
+    line-height: 170%;
+}
+
+.design-card {
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 40px;
+    margin-block: 30px;
+}
+
+.design-card h3 {
+    font-size: 1.4rem;
+    color: #d82f83;
+    margin-bottom: 20px;
+}
+
+.design-slider {
+    display: grid;
+    grid-template-columns: 1fr 40px;
+    margin-top: 30px;
+
+}
+
+.design-images {
+    max-height: 240px;
+    display: flex;
+    gap: 20px;
+    overflow:scroll;
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    padding-right: 40px;
+
+}
+
+.design-images img {
+    height: 100%;
+    max-width: fit-content;
+    flex: 0;
+    align-self: center;
+}
+
+.arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: rgb(194, 193, 207);
+    background: linear-gradient(to right, transparent 0%, #ffffff 80%);
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    z-index: 2;
+}
+
+.arrow-image {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 5px #00000008;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.arrow-image:hover {
+    transform: scale(1.05);
+    transition: 0.2s;
+}
+
+@media only screen and (max-width: 600px) {
+    .design-images {
+        max-height: 150px;
+    }
+}
+
 /* CONTACT */
 
 .contact {
     padding-block: 80px;
+    /* background: 
+        radial-gradient(ellipse at top left, #280534, transparent), 
+        radial-gradient(ellipse at top right,#0d405d, transparent),
+        radial-gradient(ellipse at bottom right,#66072a, transparent),
+        radial-gradient(ellipse at bottom left,#0b5154, transparent); */
 }
 
 .contact h2{
@@ -652,7 +753,8 @@ form button:hover {
 footer {
     height: min-content;
     color: #3d6d81;
-    text-align: center
+    text-align: center;
+    background-color: #041a28;
 }
 
 footer a {
