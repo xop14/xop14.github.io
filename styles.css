@@ -76,7 +76,7 @@ nav {
 
 nav ul {
     display: flex;
-    gap: 20px;
+    gap: 25px;
 }
 nav li {
     padding-left: 0px;
@@ -119,7 +119,7 @@ nav li {
 }
 
 .mobile-nav-items a {
-    color: #c9a8e6;
+    color: #a8c2e6;
     text-decoration: none;
     cursor: pointer;
 }
@@ -223,10 +223,10 @@ header {
     padding: 140px max(calc(50vw - 500px), 20px) 100px !important;
     min-height: 70vh;
     background: 
-        radial-gradient(ellipse at top left, #3a034e, transparent), 
-        radial-gradient(ellipse at top right,#175579, transparent),
-        radial-gradient(ellipse at bottom left,#015d62, transparent),
-        radial-gradient(ellipse at bottom right,#9a083e, transparent);
+        radial-gradient(ellipse at top left, #280534, transparent), 
+        radial-gradient(ellipse at top right,#0d405d, transparent),
+        radial-gradient(ellipse at bottom right,#66072a, transparent),
+        radial-gradient(ellipse at bottom left,#0b5154, transparent);
 }
 
 
@@ -250,7 +250,7 @@ header {
     flex-direction: column;
     justify-content: center;
     flex: 1;
-    color: #adb7d7;
+    color: #d7add3;
 }
 
 .hide-me {
@@ -315,14 +315,14 @@ header {
 }
 
 .projects > h3 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     margin-top: 40px;
     color: #4e5963;
 
 }
 
 .projects p {
-    color: #768795;
+    color: #576571;
     line-height: 170%;
 }
 
@@ -545,7 +545,7 @@ header {
 
 .card-btns button {
     background-color:#7994ab;
-    border: 0px solid #002032;
+    border: 0;
     color: #fff;
     font-size: 1rem;
     border-radius: 5px;
@@ -557,7 +557,6 @@ header {
 
 .card-btns button:hover {
     background-color:#5481a9;
-    border: 0px solid #002032;
     color: #fff;
     transform: scale(1.02);
 }
@@ -590,6 +589,10 @@ header {
     color: #fff;
 }
 
+.contact p {
+    margin-bottom: 30px;
+}
+
 form {
     display: flex;
     flex-direction: column;
@@ -610,22 +613,26 @@ form textarea {
 }
 
 form input:focus, form textarea:focus {
-    outline: 3px solid #e69e33;
+    outline: 3px solid #de6e6a;
 }
 
 form button {
-    padding: 10px 20px;
+    padding: 12px 20px;
     border-radius: 5px;
     border: 0;
-    background-color: #1d6398;
+    background-color: #de6e6a;
     color: #fff;
     font:inherit;
     cursor: pointer;
     margin-top: 20px;
+    transition: 0.3s;
 }
 
 form button:hover {
-    background-color: #174e77;
+    background-color: #ec625e;
+    transition: 0.3s;
+    transform: scale(1.01);
+
 
 }
 
