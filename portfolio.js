@@ -9,6 +9,10 @@ const mobileNavContact = document.querySelector('.mobile-nav-contact');
 const hamburger = document.querySelector('.hamburger');
 const hamburgerClose = document.querySelector('.hamburger-close');
 const arrows = document.querySelectorAll('.arrow');
+const langSwitcher = document.querySelector('.lang-switcher');
+const mobileLangSwitcher = document.querySelector('.mobile-lang-switcher');
+const textJp = document.querySelectorAll('.jp');
+const textEn = document.querySelectorAll('.en');
 
 
 let isMenuOpen = false;
@@ -78,3 +82,72 @@ arrows.forEach((arrow) => {
         });
     });
 });
+
+
+
+// language switcher
+
+// detect browser language
+
+const browserLang = window.navigator.language.slice(0,2);
+let isJapanese = false;
+
+// set initial language of page
+
+if (browserLang !== 'ja') {
+    textJp.forEach((jp) => {
+        jp.style.display = 'none';
+    });
+    textEn.forEach((en) => {
+        en.style.display = 'inline';
+    });
+    langSwitcher.textContent = '日本語';
+    isJapanese = false;
+} else {
+    textJp.forEach((jp) => {
+        jp.style.display = 'inline';
+    });
+    textEn.forEach((en) => {
+        en.style.display = 'none';
+    });
+    langSwitcher.textContent = 'English';
+    isJapanese = true;
+}
+
+langSwitcher.addEventListener('click', () => {
+    switchLang();
+});
+
+mobileLangSwitcher.addEventListener('click', () => {
+    switchLang();
+    showMobileNav();
+});
+
+// switch languages
+function switchLang() {
+    if (isJapanese) {
+        textJp.forEach((jp) => {
+            jp.style.display = 'none';
+        });
+        textEn.forEach((en) => {
+            en.style.display = 'inline';
+        });
+        langSwitcher.textContent = '日本語';
+        setTimeout(() => {
+            mobileLangSwitcher.textContent = '日本語';
+        }, 500);
+        isJapanese = false;
+    } else {
+        textJp.forEach((jp) => {
+            jp.style.display = 'inline';
+        });
+        textEn.forEach((en) => {
+            en.style.display = 'none';
+        });
+        langSwitcher.textContent = 'English';
+        setTimeout(() => {
+            mobileLangSwitcher.textContent = 'English';
+        }, 500);
+        isJapanese = true;
+    }
+}
