@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
     <title>David Green | Front-end web developer in Japan</title>
 </head>
 <body>
@@ -13,14 +14,12 @@
         <div class="logo"><a href="./index.html">xop14.github.io</a></div>
         <div class="nav-items">
             <ul>
-                <li class="nav-projects"><a>Coding Projects</a></li>
-                <li class="nav-design"><a>Design Work</a></li>
+                <li class="nav-projects"><a>Coding</a></li>
+                <li class="nav-design"><a>Design</a></li>
                 <li class="nav-contact"><a>Contact</a></li>
                 <li><a href="https://github.com/xop14" target="_blank">GitHub</a></li>
+                <li><a class="lang-switcher">日本語</a></li>
             </ul>
-        </div>
-        <div>
-            <button class="lang-switcher">日本語</button>
         </div>
         <div class="hamburger">
             <svg style="width:30px;height:30px" viewBox="0 0 24 24">
@@ -36,34 +35,33 @@
         </div>
         <div class="mobile-nav-items">
             <ul>
-                <li class="mobile-nav-projects"><a>Coding Projects</a></li>
-                <li class="mobile-nav-projects"><a>Design Work</a></li>
+                <li class="mobile-nav-projects"><a>Coding</a></li>
+                <li class="mobile-nav-design"><a>Design</a></li>
                 <li class="mobile-nav-contact"><a>Contact</a></li>
                 <li><a href="https://github.com/xop14" target="_blank">GitHub</a></li>
+                <li class="mobile-lang-switcher"><a>日本語</a></li>
             </ul>
-        </div>
-        <div>
-            <button class="mobile-lang-switcher">日本語</button>
         </div>
     </div>
     <header class="section ">
+        <div class="header-background"></div>
         <div class="header-text">
             <!-- <h1 class="title en highlight">davidGreen.<span class="hide-me"> </span>portfolio;</h1> -->
             <h1 class="title highlight">
-                Hi. I'm David Green.<br>This is my portfilio.
+                Hi. I'm <span class="my-name">David Green</span>.<br>This is my portfilio.
                 <!-- <span class="en">Hi. I'm David Green.<br>This is my portfilio.</span>
                 <span class="jp">グリーン・デイヴィッドの<br>ポートフォリオ</span> -->
             </h1>
             <h2>
                 <span class="en">
-                    Front-end web developer in Japan.
+                    British front-end web developer living in Japan.
                     Currently learning full stack.
-                    I love technology, problem solving, beautiful design, and creating fantastic user experiences.
+                    I love technology, problem solving, beautiful design, and creating smooth user experiences.
                 </span>
                 <span class="jp">
                     日本在住イギリス人のフロントエンドWeb開発者。
                     現在、フルスタックを勉強中。
-                    技術、問題解決、美しいデザイン、素晴らしいユーザーエクスペリエンスを作ることが大好きです。
+                    技術、問題解決、美しいデザイン、スムーズなユーザーエクスペリエンスを作ることが大好きです。
                 </span>
             </h2>
         </div>
@@ -78,11 +76,11 @@
         </h2>
         <p>
             <span class="en">
-                Here is a selection of web-based projects that I have completed as part of Harvard X's amazing <a href="https://cs50.harvard.edu/x/2022/" target="_blank">CS50</a> and <a href="https://cs50.harvard.edu/web/2020/" target="_blank">CS50W</a> courses, as well as the fantastic <a href="https://www.theodinproject.com" target="_blank">Odin Project</a>.
+                Here is a selection of web-based projects that I have completed as part of Harvard X's well-known <a href="https://cs50.harvard.edu/x/2022/" target="_blank">CS50</a> and <a href="https://cs50.harvard.edu/web/2020/" target="_blank">CS50W</a> courses, as well as the fantastic <a href="https://www.theodinproject.com" target="_blank">The Odin Project</a>.
                 I always try to go beyond the project specifications and put extra effort into design and functionality to create projects that impress.
             </span>
             <span class="jp">
-                ここでは、Harvard Xの素晴らしい<a href="https://cs50.harvard.edu/x/2022/" target="_blank">CS50</a>と<a href="https://cs50.harvard.edu/web/2020/" target="_blank">CS50W</a>コース、そして素晴らしい<a href="https://www.theodinproject.com" target="_blank">Odinプロジェクト</a>の一環として完成させたWebベースのプロジェクトの一部を紹介します。私はいつも、プロジェクトの仕様を超えて、デザインや機能性に特別な努力を払い、印象的なプロジェクトを作るよう心がけています。
+                ここでは、Harvard Xの有名な<a href="https://cs50.harvard.edu/x/2022/" target="_blank">CS50</a>と<a href="https://cs50.harvard.edu/web/2020/" target="_blank">CS50W</a>コース、そして素晴らしい<a href="https://www.theodinproject.com" target="_blank"> The Odin Project</a>の一環として完成させたWebプロジェクトの一部を紹介します。私はいつも、プロジェクトの仕様を超えて、デザインや機能性に特別な努力を払い、印象的なプロジェクトを作るよう心がけています。
             </span>
         </p>
         <h3>
@@ -178,8 +176,8 @@
                         <span class="jp">ピクセル・マシン</span>
                     </h3>
                     <p>
-                        <span class="en">Create and export retro pixel art right from your desktop browser. Edit your palette, adjust your brush size, undo and redo your changes, and much more.</span>
-                        <span class="jp">レトロなピクセルアートをデスクトップのブラウザから直接作成し、書き出すことができます。パレットの編集、ブラシサイズの調整、変更の取り消しややり直しなど、さまざまなことができます。</span>
+                        <span class="en">Create and export retro pixel art right from your desktop browser. It offers a range of features such as palette editing, brush size customization, and the ability to undo and redo your changes, and much more.</span>
+                        <span class="jp">レトロなピクセルアートをデスクトップのブラウザから直接作成し、書き出すことができます。パレット編集、ブラシサイズのカスタマイズ、変更を元に戻す・やり直す機能など、さまざまな機能を提供します。</span>
                     </p>
                     <div class="card-tags">
                         <div class="tag-html">HTML</div>
@@ -187,13 +185,13 @@
                         <div class="tag-js">JavaScript</div>
                     </div>
                     <div class="card-btns">
-                        <button onclick="location.href='https://github.com/xop14/pixel-machine'">
-                            <span class="en">View on GitHub</span>
-                            <span class="jp">GitHubで見る</span>
-                        </button>
                         <button onclick="location.href='https://xop14.github.io/pixel-machine'">
                             <span class="en">Live Preview</span>
                             <span class="jp">ライブプレビュー</span>
+                        </button>
+                        <button onclick="location.href='https://github.com/xop14/pixel-machine'">
+                            <span class="en">View on GitHub</span>
+                            <span class="jp">GitHubで見る</span>
                         </button>
                     </div>
                 </div>
@@ -231,13 +229,13 @@
 
                     </div>
                     <div class="card-btns">
-                        <button onclick="location.href='https://github.com/xop14/auction'">
-                            <span class="en">View on GitHub</span>
-                            <span class="jp">GitHubで見る</span>
-                        </button>
                         <button id="watch-auction" onclick="location.href='https://youtu.be/iZ0GWz2vlus'">
                             <span class="en">Watch Video</span>
                             <span class="jp">ビデオを見る</span>
+                        </button>
+                        <button onclick="location.href='https://github.com/xop14/auction'">
+                            <span class="en">View on GitHub</span>
+                            <span class="jp">GitHubで見る</span>
                         </button>
                     </div>
                 </div>
@@ -271,13 +269,13 @@
                         <div class="tag-js">JavaScript</div>
                     </div>
                     <div class="card-btns">
-                        <button onclick="location.href='https://github.com/xop14/metronome'">
-                            <span class="en">View on GitHub</span>
-                            <span class="jp">GitHubで見る</span>
-                        </button>
                         <button onclick="location.href='https://xop14.github.io/metronome'">
                             <span class="en">Live Preview</span>
                             <span class="jp">ライブプレビュー</span>
+                        </button>
+                        <button onclick="location.href='https://github.com/xop14/metronome'">
+                            <span class="en">View on GitHub</span>
+                            <span class="jp">GitHubで見る</span>
                         </button>
                     </div>
                 </div>
@@ -294,7 +292,133 @@
                     <img class="card-image" src="./images/metronome.png" alt="">
                 </div>
             </div>
-            
+
+            <div class="card">
+                <div class="card-content">
+                    <h3>
+                        <span class="en">Mail App</span>
+                        <span class="jp">オークションサイト</span>
+                    </h3>
+                    <p>
+                        <span class="en">Simple one-page mail web app that lets you send, receive and archive emails. It uses JavaScript's Fetch API to request and post data in JSON format via an API on the server. This project was part of Harvard X's CS50W course.</span>
+                        <span class="jp">メールの送受信とアーカイブができる、シンプルな1ページメールWebアプリです。JavaScriptのFetch APIを使って、サーバー上のAPI経由でJSON形式のデータをリクエストし、ポストしています。このプロジェクトは、Harvard XのCS50Wコースの一部でした。</span>
+                    </p>
+                    <div class="card-tags">
+                        <div class="tag-html">HTML</div>
+                        <div class="tag-css">CSS</div>
+                        <div class="tag-js">JavaScript</div>
+                        <div class="tag-python">Python</div>
+                        <div class="tag-django">Django</div>
+                        <div class="tag-sqlite">SQLite</div>
+
+                    </div>
+                    <div class="card-btns">
+                        <button id="watch-auction" onclick="location.href='https://youtu.be/9-_MrotYCgk'">
+                            <span class="en">Watch Video</span>
+                            <span class="jp">ビデオを見る</span>
+                        </button>
+                        <button onclick="location.href='https://github.com/xop14/mail'">
+                            <span class="en">View on GitHub</span>
+                            <span class="jp">GitHubで見る</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-image">
+                    <div class="card-overlay" onclick="location.href='https://youtu.be/9-_MrotYCgk'">
+                        <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17M12,4.5C7,4.5 2.73,7.61 1,12C2.73,16.39 7,19.5 12,19.5C17,19.5 21.27,16.39 23,12C21.27,7.61 17,4.5 12,4.5Z" />
+                        </svg>
+                        <h3>
+                            <span class="en">Watch Video</span>
+                            <span class="jp">ビデオを見る</span>
+                        </h3>
+                    </div>
+                    <img class="card-image" src="./images/mail.png" alt="">
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <h3>
+                        <span class="en">Tic-tac-toe</span>
+                        <span class="jp">まる罰ゲーム</span>
+                    </h3>
+                    <p>
+                        <span class="en">This classic game has an A.I. bot which uses a <a href="https://en.wikipedia.org/wiki/Minimax" target="_blank">minimax algorithm</a> to calculate perfect moves. It makes use of JavaScript module patterns and IFFEs to break up the code into logical blocks with hidden variable and methods.</span>
+                        <span class="jp">この古典的なゲームには、完璧な手を計算するために<a href="https://ja.wikipedia.org/wiki/%E3%83%9F%E3%83%8B%E3%83%9E%E3%83%83%E3%82%AF%E3%82%B9%E6%B3%95" target="_blank">ミニマックスアルゴリズム</a>を使用するA.I.ボットがあります。JavaScriptのモジュールパターンとIFFEを利用して、コードを隠れた変数とメソッドを持つ論理ブロックに分割しています。</span>
+                    </p>
+                    <div class="card-tags">
+                        <div class="tag-html">HTML</div>
+                        <div class="tag-css">CSS</div>
+                        <div class="tag-js">JavaScript</div>
+                    </div>
+                    <div class="card-btns">
+                        <button onclick="location.href='https://xop14.github.io/tic-tac-toe'">
+                            <span class="en">Live Preview</span>
+                            <span class="jp">ライブプレビュー</span>
+                        </button>
+                        <button onclick="location.href='https://github.com/xop14/tic-tac-toe'">
+                            <span class="en">View on GitHub</span>
+                            <span class="jp">GitHubで見る</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-image">
+                    <div class="card-overlay" onclick="location.href='https://xop14.github.io/tic-tac-toe'">
+                        <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17M12,4.5C7,4.5 2.73,7.61 1,12C2.73,16.39 7,19.5 12,19.5C17,19.5 21.27,16.39 23,12C21.27,7.61 17,4.5 12,4.5Z" />
+                        </svg>
+                        <h3>
+                            <span class="en">Live Preview</span>
+                            <span class="jp">ライブプレビュー</span>
+                        </h3>
+                    </div>
+                    <img class="card-image" src="./images/tic-tac-toe.png" alt="">
+                </div>
+            </div>
+
+
+
+            <div class="card">
+                <div class="card-content">
+                    <h3>
+                        <span class="en">Calculator</span>
+                        <span class="jp">電卓</span>
+                    </h3>
+                    <p>
+                        <span class="en">A simple, mobile-friendly calculator built with JavaScript that dynamically displays calculations on the screen. The calculator automatically adjusts the font size of the numbers to ensure optimal readability, regardless of the length of the calculation.</span>
+                        <span class="jp">JavaScriptで作られた、シンプルでモバイルフレンドリーな電卓で、計算結果を動的に画面に表示します。計算の長さに関わらず、数字のフォントサイズを自動的に調整し、読みやすさを最適化する電卓です。</span>
+                    </p>
+                    <div class="card-tags">
+                        <div class="tag-html">HTML</div>
+                        <div class="tag-css">CSS</div>
+                        <div class="tag-js">JavaScript</div>
+                    </div>
+                    <div class="card-btns">
+                        <button onclick="location.href='https://xop14.github.io/calculator'">
+                            <span class="en">Live Preview</span>
+                            <span class="jp">ライブプレビュー</span>
+                        </button>
+                        <button onclick="location.href='https://github.com/xop14/calculator'">
+                            <span class="en">View on GitHub</span>
+                            <span class="jp">GitHubで見る</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-image">
+                    <div class="card-overlay" onclick="location.href='https://xop14.github.io/calculator'">
+                        <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17M12,4.5C7,4.5 2.73,7.61 1,12C2.73,16.39 7,19.5 12,19.5C17,19.5 21.27,16.39 23,12C21.27,7.61 17,4.5 12,4.5Z" />
+                        </svg>
+                        <h3>
+                            <span class="en">Live Preview</span>
+                            <span class="jp">ライブプレビュー</span>
+                        </h3>
+                    </div>
+                    <img class="card-image" src="./images/calculator.png" alt="">
+                </div>
+            </div>
+
             <div class="card">
                 <div class="card-content">
                     <h3>
@@ -311,13 +435,13 @@
                         <div class="tag-js">JavaScript</div>
                     </div>
                     <div class="card-btns">
-                        <button onclick="location.href='https://github.com/xop14/sign-up-form'">
-                            <span class="en">View on GitHub</span>
-                            <span class="jp">GitHubで見る</span>
-                        </button>
                         <button onclick="location.href='https://xop14.github.io/sign-up-form'">
                             <span class="en">Live Preview</span>
                             <span class="jp">ライブプレビュー</span>
+                        </button>
+                        <button onclick="location.href='https://github.com/xop14/sign-up-form'">
+                            <span class="en">View on GitHub</span>
+                            <span class="jp">GitHubで見る</span>
                         </button>
                     </div>
                 </div>
@@ -351,13 +475,13 @@
                         <div class="tag-js">JavaScript</div>
                     </div>
                     <div class="card-btns">
-                        <button onclick="location.href='https://github.com/xop14/dashboard'">
-                            <span class="en">View on GitHub</span>
-                            <span class="jp">GitHubで見る</span>
-                        </button>
                         <button onclick="location.href='https://xop14.github.io/dashboard'">
                             <span class="en">Live Preview</span>
                             <span class="jp">ライブプレビュー</span>
+                        </button>
+                        <button onclick="location.href='https://github.com/xop14/dashboard'">
+                            <span class="en">View on GitHub</span>
+                            <span class="jp">GitHubで見る</span>
                         </button>
                     </div>
                 </div>
@@ -382,7 +506,7 @@
             <span class="jp">デザインワーク</span>
         </h2>
         <p>
-            <span class="en">I love to craft designs which are full of space and bold typography. For over 15 years I have work in English/Japanese bilingual environments and am comfortable creating designs in both languages.</span>
+            <span class="en">I love to craft designs which are full of space and bold typography. For over 15 years I have worked in English/Japanese bilingual environments and am comfortable creating designs in both languages.</span>
             <span class="jp">私は、空間と大胆なタイポグラフィにあふれたデザインを作るのが好きです。15年以上、英語と日本語のバイリンガルの環境で仕事をしてきたので、両方の言語でデザインを作成することに抵抗はありません。</span>
         </p>
         <h3>

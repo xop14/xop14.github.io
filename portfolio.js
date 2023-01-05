@@ -1,5 +1,4 @@
 const cardOverlays = document.querySelectorAll('.card-overlay');
-const navItems = document.querySelector('.nav-items');
 const navProjects = document.querySelector('.nav-projects');
 const navDesign = document.querySelector('.nav-design');
 const navContact = document.querySelector('.nav-contact');
@@ -151,3 +150,82 @@ function switchLang() {
         isJapanese = true;
     }
 }
+
+
+// Intersection Observer
+const cards = document.querySelectorAll('.card');
+const obsOptions = {
+    root: null,
+    threshold: 0,
+    rootMargin: '0px'
+}
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+            return;
+        }
+        entry.target.style.opacity = '1';
+        entry.target.style.transitionDuration = '0.5s';
+        entry.target.style.transitionTimingFunction = 'cubic-bezier()';
+        entry.target.style.transform = 'translateY(0px)';
+
+
+    })
+
+}, obsOptions)
+
+cards.forEach(card => {
+    observer.observe(card);
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(30px)';
+});
+
+
+
+// categories animation
+
+const categoryBtns = document.querySelector('.categories').querySelectorAll('button');
+const btnObsOptions = {
+    root: null,
+    threshold: 1,
+    rootMargin: '0px'
+}
+const btnObserver = new IntersectionObserver((entries, observer) => {
+    let interval = 0;
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+            return;
+        }
+        entry.target.style.transitionDuration = '0.3s';
+        setTimeout(() => {
+            entry.target.style.opacity = '1';
+        }, interval);
+        interval += 50;
+
+    });
+}, btnObsOptions);
+
+categoryBtns.forEach(btn => {
+    btnObserver.observe(btn);
+    btn.style.opacity = '0';
+})
+
+
+
+// // header animation
+
+// const myName = document.querySelector('.my-name');
+// const myNameSplit = myName.textContent.split('');
+// const myNameSpan = myNameSplit.map(letter => `<span class="letter">${letter}</span>`);
+// myName.innerHTML = myNameSpan.join('');
+
+// const myLetters = document.querySelectorAll('.letter');
+// let duration = 100;
+// myLetters.forEach(letter => {
+//     setTimeout(()=> {
+//         letter.classList.toggle('jump');
+//         console.log('jump on')
+//     }, duration);
+//     duration += 100;
+// });
+
