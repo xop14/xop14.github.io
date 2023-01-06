@@ -185,20 +185,20 @@ const observer = new IntersectionObserver((entries, observer) => {
 cards.forEach(card => {
     observer.observe(card);
     card.style.opacity = '0';
-    card.style.transform = 'translateY(30px)';
+    card.style.transform = 'translateY(30px) scale(0.95)';
 });
 
 
 
 // button animation
 
-const categoryBtns = document.querySelectorAll('button');
-const btnObsOptions = {
+const categoryTags = document.querySelectorAll('.tag');
+const tagObsOptions = {
     root: null,
     threshold: 1,
     rootMargin: '0px'
 }
-const btnObserver = new IntersectionObserver((entries, observer) => {
+const tagObserver = new IntersectionObserver((entries, observer) => {
     let interval = 0;
     entries.forEach(entry => {
         if (!entry.isIntersecting) {
@@ -211,9 +211,36 @@ const btnObserver = new IntersectionObserver((entries, observer) => {
         interval += 50;
         observer.unobserve(entry.target);
     });
-}, btnObsOptions);
+}, tagObsOptions);
 
-categoryBtns.forEach(btn => {
-    btnObserver.observe(btn);
-    btn.style.opacity = '0';
+categoryTags.forEach(tag => {
+    tagObserver.observe(tag);
+    tag.style.opacity = '0';
 });
+
+
+// header animation
+
+const arrowBg = document.querySelector('.header-foreground');
+const header = document.querySelector('header');
+const headerText = document.querySelector('.header-text');
+const headerImage = document.querySelector('.header-image');
+
+window.addEventListener('DOMContentLoaded', scrollLoop, false);
+
+let scrollY;
+
+function scrollLoop() {
+    if (window.innerWidth > 600) {
+        scrollY = window.scrollY;
+        translateY(scrollY/2, headerText);
+        translateY(scrollY/2, headerImage);
+        translateY(scrollY, arrowBg);
+        arrowBg.style.backgroundSize = `${100 + (scrollY/50)}px`;
+    }
+    requestAnimationFrame(scrollLoop);
+}
+
+function translateY(yPos, el) {
+    el.style.transform = `translateY(${yPos}px)`;
+}

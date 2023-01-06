@@ -27,10 +27,11 @@ img, picture, svg, video {
 
 body {
     min-height: 100vh;
-    background-color: #002032;
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     position: relative;
+    background-color: #002032;
 }
 
 h1 {
@@ -241,8 +242,21 @@ header {
         radial-gradient(ellipse at top right,#0d405d, transparent),
         radial-gradient(ellipse at bottom right,#66072a, transparent),
         radial-gradient(ellipse at bottom left,#0b5154, transparent);
+    z-index: -300;
+    animation: hue-change 20s infinite;
+}
+
+.header-foreground {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: url(./images/triangle.svg) repeat;
+    background-size: 100px;
+    background-position: center;
     z-index: -200;
     animation: hue-change 20s infinite;
+    opacity: 0.8%;
+    transform-origin: right;
 }
 
 @keyframes hue-change {
@@ -277,7 +291,7 @@ header {
 }
 
 .header-text h1 {
-    font-size: clamp(2.5rem, 5vw, 3.3rem);
+    font-size: clamp(2.2rem, 4.8vw, 3rem);
 }
 .header-text h2 {
     font-size: clamp(1.25rem, 1.95vw, 1.5rem);
@@ -317,7 +331,8 @@ header {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(2, min-content);
         height: min-content;
-        padding-bottom: 60px !important;
+        padding-bottom: 40px !important;
+        padding-top: 110px !important;
         gap: 30px
 
     }
@@ -742,6 +757,7 @@ header {
 
 .contact {
     padding-block: 80px;
+    background-color: #002032;
     /* background: 
         radial-gradient(ellipse at top left, #280534, transparent), 
         radial-gradient(ellipse at top right,#0d405d, transparent),
@@ -823,7 +839,7 @@ footer {
     height: min-content;
     color: #3d6d81;
     text-align: center;
-    /* background-color: #041a28; */
+    background-color: #041a28;
 }
 
 footer a {
