@@ -261,10 +261,11 @@ header {
 }
 
 .header-image img {
-    border-radius: 50%;
+    border-radius: 0%;
     outline: 0vw solid #fff2;
     max-width: clamp(180px ,30vw, 280px);
     box-shadow: 0 0 10px 10px #0b1b3022;
+    -webkit-mask-image: url(./images/mask-02.svg);
 }
 
 .header-text {
