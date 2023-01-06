@@ -86,11 +86,6 @@ nav li {
     cursor: pointer;
 }
 
-nav li:hover, nav .logo:hover {
-    transition: 0.3s;
-    transform: rotate(-3deg);
-}
-
 .nav-items {
     margin-left: auto;
 }
