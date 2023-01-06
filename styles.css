@@ -86,6 +86,11 @@ nav li {
     cursor: pointer;
 }
 
+nav li:hover, nav .logo:hover {
+    transition: 0.3s;
+    transform: rotate(-3deg);
+}
+
 .nav-items {
     margin-left: auto;
 }
@@ -99,7 +104,6 @@ nav li {
     text-underline-offset: 5px;
     text-decoration-thickness: 3px;
     color: #fffc;
-    transition: 0.3s;
 }
 
 .lang-switcher {

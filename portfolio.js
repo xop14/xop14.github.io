@@ -4,6 +4,7 @@ const navDesign = document.querySelector('.nav-design');
 const navContact = document.querySelector('.nav-contact');
 const mobileNav = document.querySelector('.mobile-nav');
 const mobileNavProjects = document.querySelector('.mobile-nav-projects');
+const mobileNavDesign = document.querySelector('.mobile-nav-design');
 const mobileNavContact = document.querySelector('.mobile-nav-contact');
 const hamburger = document.querySelector('.hamburger');
 const hamburgerClose = document.querySelector('.hamburger-close');
@@ -41,6 +42,14 @@ mobileNavProjects.addEventListener("click", () => {
     });
     showMobileNav();
 })
+
+mobileNavDesign.addEventListener("click", () => {
+    document.querySelector("#design").scrollIntoView({
+        behavior: "smooth"
+    });
+    showMobileNav();
+})
+
 mobileNavContact.addEventListener("click", () => {
     document.querySelector("#contact").scrollIntoView({
         behavior: "smooth"
