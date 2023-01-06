@@ -153,7 +153,7 @@ function switchLang() {
 
 
 // Intersection Observer
-const cards = document.querySelectorAll('.card');
+const cards = document.querySelectorAll('.fade-in');
 const obsOptions = {
     root: null,
     threshold: 0,
@@ -168,8 +168,7 @@ const observer = new IntersectionObserver((entries, observer) => {
         entry.target.style.transitionDuration = '0.5s';
         entry.target.style.transitionTimingFunction = 'cubic-bezier()';
         entry.target.style.transform = 'translateY(0px)';
-
-
+        observer.unobserve(entry.target);
     })
 
 }, obsOptions)
@@ -182,9 +181,9 @@ cards.forEach(card => {
 
 
 
-// categories animation
+// button animation
 
-const categoryBtns = document.querySelector('.categories').querySelectorAll('button');
+const categoryBtns = document.querySelectorAll('button');
 const btnObsOptions = {
     root: null,
     threshold: 1,
@@ -201,31 +200,11 @@ const btnObserver = new IntersectionObserver((entries, observer) => {
             entry.target.style.opacity = '1';
         }, interval);
         interval += 50;
-
+        observer.unobserve(entry.target);
     });
 }, btnObsOptions);
 
 categoryBtns.forEach(btn => {
     btnObserver.observe(btn);
     btn.style.opacity = '0';
-})
-
-
-
-// // header animation
-
-// const myName = document.querySelector('.my-name');
-// const myNameSplit = myName.textContent.split('');
-// const myNameSpan = myNameSplit.map(letter => `<span class="letter">${letter}</span>`);
-// myName.innerHTML = myNameSpan.join('');
-
-// const myLetters = document.querySelectorAll('.letter');
-// let duration = 100;
-// myLetters.forEach(letter => {
-//     setTimeout(()=> {
-//         letter.classList.toggle('jump');
-//         console.log('jump on')
-//     }, duration);
-//     duration += 100;
-// });
-
+});
