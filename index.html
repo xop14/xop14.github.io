@@ -21,25 +21,22 @@
                 <li><a class="lang-switcher">日本語</a></li>
             </ul>
         </div>
-        <div class="hamburger">
-            <svg style="width:30px;height:30px" viewBox="0 0 24 24">
-                <path fill="currentColor" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
+        <button class="hamburger-btn">
+            <svg class="hamburger-svg hamburger-svg-off" viewBox="0 0 100 100" width="30px" height="30px">
+                <rect class="line top" width="80" height="10" x="10" y="20" rx="5"></rect>
+                <rect class="line middle" width="80" height="10" x="10" y="45" rx="5"></rect>
+                <rect class="line bottom" width="80" height="10" x="10" y="70" rx="5"></rect>
             </svg>
-        </div>
+        </button>
     </nav>
     <div class="mobile-nav">
-        <div class="hamburger-close">
-            <svg style="width:30px;height:30px" viewBox="0 0 24 24">
-                <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />
-            </svg>
-        </div>
         <div class="mobile-nav-items">
             <ul>
                 <li class="mobile-nav-projects"><a>Coding</a></li>
                 <li class="mobile-nav-design"><a>Design</a></li>
                 <li class="mobile-nav-contact"><a>Contact</a></li>
                 <li><a href="https://github.com/xop14" target="_blank">GitHub</a></li>
-                <li class="mobile-lang-switcher"><a>日本語</a></li>
+                <li><a class="mobile-lang-switcher">日本語</a></li>
             </ul>
         </div>
     </div>
@@ -507,8 +504,8 @@
             <span class="jp">デザインワーク</span>
         </h2>
         <p>
-            <span class="en">I love to craft designs which are full of space and bold typography. For over 15 years I have worked in English/Japanese bilingual environments and am comfortable creating designs in both languages.</span>
-            <span class="jp">私は、空間と大胆なタイポグラフィにあふれたデザインを作るのが好きです。15年以上、英語と日本語のバイリンガルの環境で仕事をしてきたので、両方の言語でデザインを作成することに抵抗はありません。</span>
+            <span class="en">I love to craft clean designs which feature bold typography and plently of space. As well as 20+ years of experience using Photoshop, I have also used Illustrator for numerous projects. In addition, having worked in English/Japanese bilingual environments since 2007, I am comfortable creating designs in both languages.</span>
+            <span class="jp">私は、大胆なタイポグラフィと十分なスペースを特徴とするクリーンなデザインを作るのが好きです。20年以上にわたるPhotoshopの使用経験に加え、Illustratorも数多くのプロジェクトで使用してきました。また、2007年から英語と日本語のバイリンガル環境で働いていたため、両方の言語でデザインを作成することに慣れています。</span>
         </p>
         <h3>
             <span class="en">Design Tools:</span>
@@ -619,6 +616,9 @@
     <footer class="section">
         This site was created by David Green <br class="mobile-break"> <a href="https://github.com/xop14" target="_blank">xop14 on GitHub</a>
     </footer>
+    <div class="top-btn"><svg style="width:32px;height:32px" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z" />
+    </svg></div>
     <script src="./portfolio.js"></script>
 </body>
 </html>

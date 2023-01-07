@@ -102,16 +102,9 @@ nav li {
     color: #fffc;
 }
 
-.lang-switcher {
-    display: inline-block;
-    text-align: right;
-    width: 50px;
-    position: relative;
-}
-
 .mobile-nav-items {
     margin-left: auto;
-    padding: 30px 20px;
+    padding: 80px 16px;
     text-align: right;
     user-select: none;
 }
@@ -122,10 +115,11 @@ nav li {
     flex-direction: column;
     gap: 30px;
     font-size: 2rem;
+    font-weight: 600;
 }
 
 .mobile-nav-items a {
-    color: #a8c2e6;
+    color: #fffa;
     text-decoration: none;
     cursor: pointer;
 }
@@ -133,39 +127,58 @@ nav li {
     text-decoration: underline;
     text-underline-offset: 5px;
     text-decoration-thickness: 3px;
-    color: #a7bed9;
+    color: #fff;
 }
 
-.mobile-lang-switcher {
-    /* margin-left: auto;
-    padding-right: 20px;
-    margin-top: 40px;
-    width: 150px;
-    height: 60px;
-    font-size: 2rem; */
-}
-
-nav button {
+.hamburger-btn {
     padding: 5px 8px;
-    background-color: #fff2;
-    border-radius: 5px;
     border: 0px;
-    color: #a7bed9;
     cursor: pointer;
-    white-space: nowrap;
-}
-
-nav button:hover {
-    background-color: #a7bed9;
-    color: #112f52;
-}
-
-.hamburger {
+    background-color: transparent;
+    fill: #fff6;
     display: none;
+    z-index: 200;
+}
+
+.hamburger-btn:hover {
+    background-color: transparent;
+    fill: #fffc;
+}
+
+.hamburger-svg-off .line {
+    transition: 
+        y 250ms ease-in-out 250ms,
+        transform 250ms ease-in-out,
+        opacity 0ms 250ms
+    ;
+    transform-origin: center;
+}
+
+.hamburger-svg-on .line {
+    transition: 
+        y 250ms ease-in-out,
+        transform 250ms ease-in-out 250ms,
+        opacity 0ms 250ms
+    ;
+    transform-origin: center;
+    fill: #fff;
+}
+
+.hamburger-svg-on :is(.top, .bottom) {
+    y:45;
+}
+
+.hamburger-svg-on .top {
+    transform: rotate(45deg);
+}
+.hamburger-svg-on .middle {
+    opacity: 0;
+}
+.hamburger-svg-on .bottom {
+    transform: rotate(-45deg);
 }
 
 .mobile-nav {
-    background-color: #09315b;
     position: absolute;
     height: 100%;
     width: 100vw;
@@ -173,36 +186,14 @@ nav button:hover {
     padding: 30px 20px;
 }
 
-.mobile-nav button {
-    padding: 8px 16px;
-    background-color: #fff2;
-    border-radius: 5px;
-    border: 0px;
-    font-size: 1.5rem;
-    color: #a7bed9;
-    cursor: pointer;
-    white-space: nowrap;
-}
-
-.mobile-nav button:hover {
-    background-color: #a7bed9;
-    color: #112f52;
-}
-
 @media only screen and (max-width: 800px) {
     .nav-items {
         display: none;
     }
-    .hamburger, .hamburger-close {
+    .hamburger-btn {
         display: inline;
         margin-left: auto;
-        cursor: pointer;
-        transition: 1s;
     }
-    .hamburger:hover, .hamburger-close:hover {
-        color: #ccc;
-    }
-    
     .mobile-nav {
         position: fixed;
         flex-direction: column;
@@ -211,12 +202,13 @@ nav button:hover {
 }
 
 @keyframes slide {
-    0% {transform: translateX(100%); opacity: 0; background-color: #d40573;}
-    100% {transform: translateX(0%); opacity: 1; background-color: #09315b;}
+    0% {transform: translateX(100%); opacity: 0; background-color: #09315b;}
+    30% {background-color: #09315b;}
+    100% {transform: translateX(0%); opacity: 1; background-color: #650d46;}
 }
 @keyframes slide-back {
-    0% {transform: translateX(0%); opacity: 1; background-color: #09315b;}
-    100% {transform: translateX(100%); opacity: 0; background-color: #d40573;}
+    0% {transform: translateX(0%); opacity: 1; background-color: #650d46;}
+    100% {transform: translateX(100%); opacity: 0; background-color: #09315b;}
 }
 
 
@@ -255,7 +247,7 @@ header {
     background-position: center;
     z-index: -200;
     animation: hue-change 20s infinite;
-    opacity: 0.8%;
+    opacity: 1.5%;
     transform-origin: right;
 }
 
@@ -862,14 +854,31 @@ footer a:hover {
     }
 }
 
-/* .jump {
-    transition: 0.3s;
-    display: inline-block;
-    animation: letter-jump 1s ease-in-out;
+
+/* TOP BUTTON */
+
+.top-btn {
+    display: grid;
+    place-content: center;
+    background-color: #eeec;
+    position: fixed;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    z-index: 400;
+    bottom: 30px;
+    right: 30px;
+    cursor: pointer;
+    transition: opacity 200ms, display 200ms, scale 200ms;
+    opacity: 0;
+    color: #00203299;
+}
+.top-btn:hover {
+    background-color: #eeef;
+    transform: scale(1.05);
 }
 
-@keyframes letter-jump {
-    0% {transform: translateY(0px) scale(2);}
-    50% {transform: translateY(-10px);}
-    100% {transform: translateY(0px);}
-} */
+.top-btn-visible {
+    transition: opacity 200ms;
+    opacity: 1;
+}

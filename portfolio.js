@@ -3,20 +3,21 @@ const navProjects = document.querySelector('.nav-projects');
 const navDesign = document.querySelector('.nav-design');
 const navContact = document.querySelector('.nav-contact');
 const mobileNav = document.querySelector('.mobile-nav');
+const mobileNavItems = mobileNav.firstElementChild.querySelectorAll('li');
 const mobileNavProjects = document.querySelector('.mobile-nav-projects');
 const mobileNavDesign = document.querySelector('.mobile-nav-design');
 const mobileNavContact = document.querySelector('.mobile-nav-contact');
-const hamburger = document.querySelector('.hamburger');
-const hamburgerClose = document.querySelector('.hamburger-close');
+const hamburgerBtn = document.querySelector('.hamburger-btn');
+const hamburgerSvg = document.querySelector('.hamburger-svg');
 const arrows = document.querySelectorAll('.arrow');
 const langSwitcher = document.querySelector('.lang-switcher');
 const mobileLangSwitcher = document.querySelector('.mobile-lang-switcher');
 const textJp = document.querySelectorAll('.jp');
 const textEn = document.querySelectorAll('.en');
+const topBtn = document.querySelector('.top-btn');
 
 
 let isMenuOpen = false;
-
 
 // smooth scroll nav links
 navProjects.addEventListener("click", () => {
@@ -62,20 +63,38 @@ mobileNavContact.addEventListener("click", () => {
 function showMobileNav() {
     if (!isMenuOpen) {
         mobileNav.style.display = 'flex';
-        mobileNav.style.animation = 'slide 500ms ease-in-out';
+        mobileNav.style.animation = 'slide 500ms ease-in-out forwards';
+        hamburgerSvg.classList.add('hamburger-svg-on');
+        hamburgerSvg.classList.remove('hamburger-svg-off');
+        // cascade the nav items sliding in
+        let delay = 200;
+        mobileNavItems.forEach(item => {
+            item.style.display = 'inline-block';
+            item.style.transition = 'all 200ms ease-in-out'
+            item.style.transform = 'translateX(200px)';
+            item.style.opacity = '1';
+            setTimeout(() => {
+                item.style.transform = 'translateX(0px)';
+            }, delay);
+            delay += 100;
+        });
         isMenuOpen = true;
     } else {
-        mobileNav.style.animation = 'slide-back 500ms ease-in-out';
+        mobileNav.style.animation = 'slide-back 500ms ease-in-out forwards';
         setTimeout(() => {
             mobileNav.style.display = 'none';
         }, 500);
+        hamburgerSvg.classList.add('hamburger-svg-off');
+        hamburgerSvg.classList.remove('hamburger-svg-on');
+        mobileNavItems.forEach(item => {
+            item.style.transform = 'translateX()';
+            item.style.opacity = '1';
+        });
         isMenuOpen = false;
     }
 }
 
-hamburger.addEventListener('click', showMobileNav);
-hamburgerClose.addEventListener('click', showMobileNav);
-
+hamburgerBtn.addEventListener('click', showMobileNav);
 
 // horizontal scroll for design images
 
@@ -244,3 +263,26 @@ function scrollLoop() {
 function translateY(yPos, el) {
     el.style.transform = `translateY(${yPos}px)`;
 }
+
+
+// top scroll button
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY < 1900) {
+        topBtn.style.display = 'none';
+    } else {
+        topBtn.style.display = 'grid';
+    }
+    if (window.scrollY > 2000) {
+        topBtn.classList.add('top-btn-visible');
+    } else {
+        topBtn.classList.remove('top-btn-visible');
+    }
+});
+
+topBtn.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+})
