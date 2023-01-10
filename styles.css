@@ -278,6 +278,8 @@ header {
     background: url(./images/triangle.svg) repeat;
     background-size: 100px;
     background-position: center;
+    background-attachment: fixed;
+    transition: background-size 15ms ease-in-out;
     z-index: -200;
     animation: hue-change 20s infinite;
     opacity: 1.5%;

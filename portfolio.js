@@ -208,7 +208,6 @@ cards.forEach(card => {
 });
 
 
-
 // button animation
 
 const categoryTags = document.querySelectorAll('.tag');
