@@ -253,7 +253,7 @@ function scrollLoop() {
         scrollY = window.scrollY;
         translateY(scrollY/2, headerText);
         translateY(scrollY/2, headerImage);
-        translateY(scrollY, arrowBg);
+        translateY(scrollY * -0.3, arrowBg);
         arrowBg.style.backgroundSize = `${100 + (scrollY/50)}px`;
     }
     requestAnimationFrame(scrollLoop);
