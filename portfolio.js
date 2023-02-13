@@ -15,6 +15,7 @@ const mobileLangSwitcher = document.querySelector('.mobile-lang-switcher');
 const textJp = document.querySelectorAll('.jp');
 const textEn = document.querySelectorAll('.en');
 const topBtn = document.querySelector('.top-btn');
+// const body = document.querySelector(body);
 
 
 let isMenuOpen = false;
@@ -79,6 +80,9 @@ function showMobileNav() {
             delay += 100;
         });
         isMenuOpen = true;
+        // stop body from scrolling
+        document.body.style = "overflow-y:hidden";
+
     } else {
         mobileNav.style.animation = 'slide-back 500ms ease-in-out forwards';
         setTimeout(() => {
@@ -91,6 +95,8 @@ function showMobileNav() {
             item.style.opacity = '1';
         });
         isMenuOpen = false;
+        // enable scrolling again
+        document.body.style = "overflow-y:visible";
     }
 }
 
