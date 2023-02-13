@@ -80,8 +80,8 @@ function showMobileNav() {
             delay += 100;
         });
         isMenuOpen = true;
-        // stop body from scrolling
-        document.body.style = "overflow-y:hidden";
+        // stop body from scrolling - doesn't work on safari :(
+        document.body.style.overflowY = 'hidden';
 
     } else {
         mobileNav.style.animation = 'slide-back 500ms ease-in-out forwards';
@@ -96,7 +96,7 @@ function showMobileNav() {
         });
         isMenuOpen = false;
         // enable scrolling again
-        document.body.style = "overflow-y:visible";
+        document.body.style.overflowY = 'visible';
     }
 }
 
